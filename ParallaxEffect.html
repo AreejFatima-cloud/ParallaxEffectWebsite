@@ -1,0 +1,78 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="stylesheet" type="text/css" href="Style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+	    <title>Parallax Effect Website</title>
+</head>
+<body>
+    <header>
+        <h2 class="logo">Parallax </h2>
+        <nav class="navigation">           
+            <a href="#" class="active"> Home</a>
+            <a href="#"> About</a>
+            <a href="#"> Services</a>
+            <a href="#"> Contact</a>
+        </nav>
+    </header>
+    
+    <section class="parallax" >
+        
+        <img src="hill1.png" id="hill1">
+        <img src="hill2.png" id="hill2">
+        <img src="hill3.png" id="hill3">       
+        <img src="hill4.png" id="hill4"> 
+        <img src="hill5.png" id="hill5">   
+        <img src="leaf.png" id="leaf">
+        <img src="tree.png" id="tree">
+        <h2 id="text">
+            Parallax Effect Website
+         </h2>
+        <img src="plant.png" id="plant">
+
+    </section>
+
+    <section class="sec">
+
+        <h2>What is a parallax effect?</h2>
+        <p>
+            Have you ever scrolled through a page that felt dynamic? As if you were scrolling through more than one view at once? That’s a parallax effect, and it happens when the different elements of a page move at different speeds — creating a 3D depth effect.
+            
+            What’s often happening is that the background image will be held in place or move slowly while the images and text on the page scroll normally. </p>
+           <br><br> <h2>What are the benefits of using a parallax effect?</h2>
+<p>The parallax effect is a great way to enrich a site, showcase products, and create a sense of immersion. <br>
+
+<b>3D depth: </b>By separating layers and moving them at different speeds, you trick the user’s mind into perceiving 3D depth.<br>
+<b>Sense of scale: </b>Having more elements on different levels lets you differentiate them from each other and gives a sense of scale that’s usually difficult to convey with 2D static images.<br>
+<b>Targeting user focus:</b> If you want to keep your users’ eyes on a specific element, scrolling effects let you seemingly animate something or everything else around it to maintain focus.<br>
+<b>Break up content: </b>B2B sites frequently use parallax effects to showcase important company offerings. These sites have a lot of information, so it’s a good way to break up the content.<br>
+<b>Modern design:</b> Sleek flowing designs are part of a modern web and mobile app aesthetic that companies from all industries follow. Make the most of scrolling effects to keep your designs current.<br></p>
+           
+    </section>
+    <script>
+        let text = document.getElementById('text');
+        let leaf = document.getElementById('leaf');
+        let hill1 = document.getElementById('hill1');
+        let hill4 = document.getElementById('hill4');
+        let hill5 = document.getElementById('hill5');
+
+        window.addEventListener('scroll', ()=>
+    {
+        let value=window.scrollY;
+
+        text.style.marginTop = value * 2.5+'px';
+        leaf.style.top = value * -1.5+'px';
+        leaf.style.left = value * 1.5+'px';
+
+        hill5.style.left = value * 1.5+'px';
+        hill4.style.left= value * -1.5+'px';
+
+        hill1.style.top = value * 1+ 'px';
+
+    });
+    </script>
+</body>
+</html>
